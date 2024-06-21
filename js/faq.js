@@ -1,10 +1,14 @@
 const faqContainer = document.getElementById('faq-container');
 const loadingDiv = document.getElementById('loading');
 
-// Fetch the FAQ data and categories from the JSON files
+// URLs for the JSON files on GitHub
+const categoriesUrl = 'https://raw.githubusercontent.com/teamneoneko/neonekowebsite/main/json/categories.json';
+const faqUrl = 'https://raw.githubusercontent.com/teamneoneko/neonekowebsite/main/json/faq.json';
+
+// Fetch the FAQ data and categories from the GitHub JSON files
 Promise.all([
-    fetch('json/faq.json'),
-    fetch('json/categories.json')
+    fetch(faqUrl),
+    fetch(categoriesUrl)
 ])
     .then(responses => Promise.all(responses.map(response => response.json())))
     .then(([faqData, categoriesData]) => {
