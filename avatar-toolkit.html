@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Avatar Toolkit, the modern replacement for Cats Blender Plugin. Discover its features, development status, and why it's being created.">
+    <title>Avatar Toolkit - Neoneko Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/project-page.css">
+</head>
+<body>
+    <header>
+        <nav aria-label="Main navigation">
+            <a href="index.html" class="logo-link" aria-label="Neoneko home">
+                <div class="logo">Neoneko</div>
+            </a>
+            <ul class="menu" role="menubar">
+                <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+                <li role="none"><a href="projects.html" role="menuitem" class="active">Projects</a></li>
+                <li role="none"><a href="about.html" role="menuitem">About</a></li>
+                <li role="none"><a href="faq.html" role="menuitem">FAQ</a></li>
+                <li role="none"><a href="https://discord.catsblenderplugin.xyz/" target="_blank" rel="noopener noreferrer" role="menuitem">Discord</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="project-page">
+        <div class="content-wrapper">
+            <div class="main-content">
+                <h1 class="page-title">Avatar Toolkit</h1>
+                
+                <section>
+                    <h2>What is Avatar Toolkit?</h2>
+                    <p>Avatar Toolkit will be a more modern toolkit for your avatar needs. The idea is that Avatar Toolkit will replace the Cats Blender Plugin from Blender 5.0+. We want to include most features of Cats and more without the need for most 3rd-party add-ons such as Material Combiner and MMD Tools.</p>
+                    <p>You can follow the development here: <a href="https://github.com/unofficalcats/Avatar-Toolkit" target="_blank" rel="noopener noreferrer">GitHub Repository</a></p>
+                </section>
+
+                <section>
+                    <h2>Why are we making Avatar Toolkit?</h2>
+                    <p>After taking over Cats several months ago, we started to notice that relying on 3rd-party add-ons was getting harder and harder. Some add-ons are no longer updated or are very slow at getting updates. This was affecting our updates to Cats, and we were having to put warnings on the Blender 4.x version of Cats as some 3rd-party add-ons were not updated.</p>
+                    <p>This led to us also hotfixing stuff on these 3rd-party add-ons and more. Therefore, we decided it would be better for us to integrate most 3rd-party functions into a new plugin, fix the code, and make it better as well. That's where Avatar Toolkit was born.</p>
+                    <p>Also, we think it's best to move away from a name which is associated with the original author of Cats, who still to this day takes money from their Patreon for an abandoned plugin which they haven't worked on in 3 years.</p>
+                </section>
+
+                <section>
+                    <h2>Can I use Avatar Toolkit?</h2>
+                    <p>Although the Toolkit loads and works on Blender 4.3 Alpha, we highly recommend not using it as it's in a VERY early stage of development. A lot of features are missing and there are issues even with the current added features. We are aiming for a stable release for Blender 5.0. If we need some people to test, we will announce it.</p>
+                </section>
+
+                <section>
+                    <h2>Will Avatar Toolkit use MMD Tools?</h2>
+                    <p>No, our aim is to completely avoid MMD Tools. The issue with MMD Tools is that the author only cares about making their add-on work with full LTS releases of Blender and doesn't support non-LTS releases of Blender.</p>
+                    <p>An example of an LTS release is Blender 4.2, which is an upcoming LTS release of Blender so the author has been pretty on the ball with releasing updates for it. However, 4.0, 4.1, and 4.3 are not LTS releases of Blender. Therefore, the author of MMD Tools has no interest in making the plugin fully work with those versions of Blender.</p>
+                    <p>This is an issue because we do prefer to support all new Blender releases for two reasons:</p>
+                    <ol>
+                        <li>It makes it easier to update if we just do it for each release.</li>
+                        <li>Most people are using the Steam version of Blender, which automatically updates to the newest version. Therefore, we get A LOT of requests for the plugin to be updated.</li>
+                    </ol>
+                    <p>If MMD Tools isn't updated to a non-LTS version of Blender, then any function we rely on for MMD Tools could just break, which means we have to fix MMD Tools ourselves, which isn't ideal. Cats also wasn't even using 90% of MMD Tools functions, so it's just extra bloat on top of that.</p>
+                    <p>Therefore, we are going our own custom route and making our own ways to import MMD models and to just create our own MMD functions instead.</p>
+                </section>
+            </div>
+            <aside class="sidebar">
+                <div class="info-box">
+                    <h3>Project Information</h3>
+                    <ul>
+                        <li><strong>Latest Release Date:</strong> TBA</li>
+                        <li><strong>Latest Version:</strong> In Development</li>
+                        <li><strong>Supported Blender Versions:</strong> 5.0+ (planned)</li>
+                        <li><strong>GitHub:</strong> <a href="https://github.com/unofficalcats/Avatar-Toolkit" target="_blank" rel="noopener noreferrer">Repository</a></li>
+                        <li><strong>Download:</strong> Not yet available</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <ul class="footer-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="https://discord.catsblenderplugin.xyz/" target="_blank" rel="noopener noreferrer">Discord</a></li>
+            </ul>
+            <p class="footer-text">
+                Avatar Toolkit is licensed under the 
+                <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank" rel="noopener noreferrer">GPLv3 License</a>. 
+                Blender is a registered trademark of the 
+                <a href="https://www.blender.org/about/foundation/" target="_blank" rel="noopener noreferrer">Blender Foundation</a>. 
+                Neoneko is not affiliated with the Blender Foundation.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
