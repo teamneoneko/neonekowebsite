@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Find answers to frequently asked questions about Neoneko, our projects, and our team. Get the information you need about our Blender plugins and more.">
-    <title>Neoneko FAQ</title>
+    <meta name="description" content="Support Team Neoneko in creating high-quality, modern plugins for Blender and other software.">
+    <title>Support Us - Team Neoneko</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/faq.css">
+    <link rel="stylesheet" href="css/supportus.css">
 </head>
 <body>
     <header>
@@ -19,7 +18,7 @@
                 <div class="logo">Neoneko</div>
             </a>
             <ul class="menu" role="menubar">
-                <li role="none"><a href="index.html" role="menuitem" class="active">Home</a></li>
+                <li role="none"><a href="index.html" role="menuitem">Home</a></li>
                 <li role="none" class="has-submenu">
                     <a href="projects.html" role="menuitem" aria-haspopup="true">Projects</a>
                     <ul class="submenu" role="menu">
@@ -28,18 +27,31 @@
                     </ul>
                 </li>
                 <li role="none"><a href="about.html" role="menuitem">About</a></li>
-                <li role="none"><a href="faq.html" role="menuitem" class="active">FAQ</a></li>
-                <li role="none"><a href="supportus.html" role="menuitem">Support Us</a></li>
+                <li role="none"><a href="faq.html" role="menuitem">FAQ</a></li>
+                <li role="none"><a href="supportus.html" role="menuitem" class="active">Support Us</a></li>
                 <li role="none"><a href="https://discord.catsblenderplugin.xyz/" target="_blank" rel="noopener noreferrer" role="menuitem">Discord</a></li>
             </ul>
         </nav>
-    </header>
+    </header>   
     <main>
-        <h1 class="page-title">Frequently Asked Questions</h1>
-        <p class="cats-faq-link">Do you have a question about Cats Blender Plugin? <a href="https://catsblenderplugin.xyz/faq.html" target="_blank" rel="noopener noreferrer">Click here</a>.</p>
-        <div id="loading">Loading...</div>
-        <div id="faq-container" style="display: none;"></div>
-    </main>
+        <h1>Support Team Neoneko</h1>
+        <p>Your support helps us continue developing and maintaining high-quality plugins for the community.</p>
+        <a href="https://pally.gg/p/teamneoneko" class="cta-button" target="_blank" rel="noopener noreferrer">Donate</a>
+        <section id="donators-feed">
+            <h2>Recent Supporters</h2>
+            <iframe 
+                src="https://pally.gg/embed/activity-feed/c1utb4ov6jkzdlasfj98qjxc" 
+                width="100%" 
+                height="400" 
+                frameborder="0"
+                title="Recent Supporters Feed"
+            ></iframe>
+        </section>
+        <section id="manual-supporters">
+            <h2>Our Supporters</h2>
+            <ul id="supporters-list"></ul>
+        </section>
+    </main>      
     <footer>
         <div class="footer-content">
             <ul class="footer-menu">
@@ -58,7 +70,7 @@
                 Neoneko is not affiliated with the Blender Foundation.
             </p>
         </div>
-    </footer>
-    <script src="js/faq.js"></script>
+    </footer>    
+    <script src="js/supportus.js"></script>
 </body>
 </html>
