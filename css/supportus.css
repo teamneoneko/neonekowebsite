@@ -56,3 +56,29 @@ main {
     border-radius: 4px;
     color: #a8b2d1;
 }
+
+#loading {
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    color: #64ffda;
+}
+
+.button {
+    display: inline-block;
+    background-color: #64ffda;
+    color: #0A192F;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.button:hover {
+    background-color: #45e6c0;
+}
