@@ -38,7 +38,14 @@ nav {
 }
 
 .logo-link {
+    display: flex;
+    align-items: center;
     text-decoration: none;
+}
+
+.logo-image {
+    height: 30px; 
+    margin-right: 10px; 
 }
 
 .menu {
@@ -108,12 +115,6 @@ nav {
     background-color: #0A192F;
 }
 
-.menu .has-submenu > a::after {
-    content: ' ▼';
-    font-size: 0.7em;
-    vertical-align: middle;
-}
-
 main {
     padding: 2rem;
     text-align: left;
@@ -181,9 +182,16 @@ footer {
         font-size: 2.5rem;
     }
     
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    
     .menu {
         flex-direction: column;
         align-items: center;
+        margin-top: 1rem;
+        margin-left: 0;
     }
     
     .menu li {
@@ -199,14 +207,6 @@ footer {
 @media screen and (max-width: 480px) {
     .logo {
         font-size: 2rem;
-    }
-    
-    nav {
-        flex-direction: column;
-    }
-    
-    .menu {
-        margin-top: 1rem;
     }
     
     h1 {
