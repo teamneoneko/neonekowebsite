@@ -1,0 +1,22 @@
+[
+    {
+        "category": "General",
+        "question": "What is Neoneko?",
+        "answer": "Neoneko is a team dedicated to creating high-quality, modern plugins for Blender and potentially other software in the future."
+    },
+        {
+        "category": "General",
+        "question": "What are you working on in Avatar Toolkit?",
+        "answer": "See https://github.com/orgs/teamneoneko/projects/ for the TODO boards of the devs of this project and what is currently happening at any given time. This tries to update every moment something happens. Also, check the forks of the project, especially dev ones to see the character differences of Pull Requests, and Commits on different branches to see a live feedback of what is happening"
+    },
+    {
+        "category": "Projects",
+        "question": "What projects is Neoneko working on?",
+        "answer": "Currently, we maintain the Unofficial version of the Cats Blender Plugin and are developing a new Blender plugin called Avatar Toolkit, which is intended to replace Cats."
+    },
+    {
+        "category": "Team",
+        "question": "Who are the members of Neoneko?",
+        "answer": "Currently, Neoneko has two team members: Yusarina (Project Lead) and 989onan. Both have owner access to the Neoneko repositories."
+    }
+]
