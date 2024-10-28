@@ -1,0 +1,21 @@
+{
+    "faqs": [
+      {
+        "id": 8,
+        "category": "Support",
+        "question": "How can I donate to you?",
+        "answer": "# Supporting Neoneko\n\n[info]You can support our development efforts through pally.gg![/info]\n\n## Donation Information:\nFor detailed information about supporting us, please visit our [link]support-us.html|Support Page[/link].\n\n[note]Your support helps us continue developing and maintaining our tools for the community![/note]",
+        "keywords": ["donate", "support", "funding", "contribution"],
+        "version": "1.0",
+        "lastUpdated": "2024-01-25T00:00:00Z",
+        "history": [
+          {
+            "version": "1.0",
+            "date": "2024-01-25T00:00:00Z",
+            "changes": "Initial version"
+          }
+        ]
+      }
+    ]
+  }
+  

@@ -1,152 +1,377 @@
-.page-title {
-    font-size: 3rem;
-    font-weight: 800;
-    margin-bottom: 1rem;
-    text-align: center;
-    background: linear-gradient(45deg, #64ffda, #00bcd4);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.wiki-container {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    justify-content: center;
+    margin-left: -170px;
 }
 
-.cats-faq-link {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 1.2rem;
-}
-
-.cats-faq-link a {
-    color: #64ffda;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.cats-faq-link a:hover {
-    color: #45e6c0;
-}
-
-#loading {
-    text-align: center;
-    font-size: 1.5rem;
-    margin-top: 2rem;
-}
-
-#faq-container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.faq-category {
-    margin-bottom: 2rem;
-    background-color: #112240;
+.wiki-sidebar {
+    background: var(--header-background);
     border-radius: 8px;
-    overflow: hidden;
-    height: auto;
+    padding: 1.5rem;
+    height: fit-content;
+    position: sticky;
+    top: 2rem;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.faq-category h2 {
-    font-size: 1.8rem;
-    color: #64ffda;
-    margin: 0;
-    padding: 1rem;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #1a2f5a;
-    transition: background-color 0.3s ease;
+.wiki-search input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background: var(--background-color);
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    box-sizing: border-box;
 }
 
-.faq-category h2:hover {
-    background-color: #1e3666;
+.wiki-nav a {
+    display: block;
+    padding: 0.8rem;
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-weight: 500;
 }
 
-.faq-category h2 i {
-    transition: transform 0.3s ease;
-    transform: rotate(-90deg);
+.wiki-nav a:hover {
+    background: var(--menu-hover-background);
+    transform: translateX(5px);
+    color: var(--link-color);
 }
 
-.faq-category h2.expanded i {
-    transform: rotate(0deg);
-}
-
-.faq-category-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    opacity: 0;
-    padding: 0 1rem;
-}
-
-.faq-category-content.expanded {
-    max-height: 1000px;
-    opacity: 1;
-    padding: 1rem;
+.wiki-content {
+    background: var(--header-background);
+    border-radius: 8px;
+    padding: 2rem;
+    min-width: 800px;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .faq-item {
-    margin-bottom: 1rem;
-    background-color: #1a2f5a;
-    border-radius: 8px;
-    overflow: hidden;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
 }
 
-.faq-item h3 {
-    font-size: 1.2rem;
-    margin: 0;
-    padding: 1rem;
+.faq-question {
     cursor: pointer;
+    padding: 1.2rem;
+    margin: 0;
+    background: var(--background-color);
+    border-radius: 4px 4px 0 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #1e3666;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    font-weight: 600;
 }
 
-.faq-item h3 i {
-    transition: transform 0.3s ease;
+.faq-question:hover {
+    background: var(--menu-hover-background);
+    color: var(--link-color);
 }
 
-.faq-item.expanded h3 i {
-    transform: rotate(180deg);
+.toggle-icon {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: var(--link-color);
 }
 
-.faq-item p {
-    margin: 0;
-    padding: 0 1rem;
-    font-size: 1rem;
+.faq-content {
+    padding: 1.5rem;
     line-height: 1.6;
-    text-align: left;
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+    background: var(--background-color);
+    border-radius: 0 0 4px 4px;
+    margin-top: 2px;
 }
 
-.faq-item.expanded p {
-    max-height: 1000px;
-    opacity: 1;
+.faq-content.hidden {
+    display: none;
+}
+
+.faq-metadata {
+    text-align: right;
     padding: 1rem;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border-color);
 }
 
-/* Styles for the error message and retry button */
-#faq-container p {
+.version {
+    margin-right: 1rem;
+    font-weight: 500;
+}
+
+.version-history-btn {
+    background: var(--header-background);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+    color: var(--text-color);
+}
+
+.version-history-btn:hover {
+    background: var(--menu-hover-background);
+    transform: translateX(5px);
+}
+
+.version-badge {
+    background: var(--link-color);
+    color: var(--button-color);
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-weight: 600;
+}
+
+.last-updated {
+    color: var(--footer-text-color);
+}
+
+.history-icon {
+    color: var(--link-color);
+}
+
+.version-history-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--header-background);
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    max-width: 550px;
+    width: 90%;
+    color: var(--text-color);
+}
+
+.version-history-modal h3 {
+    color: var(--link-color);
+    margin-top: 0;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--border-color);
+    font-size: 1.4rem;
+}
+
+.version-history-modal .history-item {
+    padding: 1.2rem;
+    border-bottom: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    margin: 0.5rem 0;
+}
+
+.version-history-modal .history-item:hover {
+    background: var(--menu-hover-background);
+    transform: translateX(5px);
+}
+
+.version-history-modal .history-version {
+    font-weight: 600;
+    color: var(--link-color);
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+}
+
+.version-history-modal .history-date {
+    font-size: 0.9rem;
+    color: var(--footer-text-color);
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.version-history-modal .history-changes {
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
+.close-modal {
+    margin-top: 2rem;
+    padding: 0.8rem 2rem;
+    background: var(--link-color);
+    color: var(--button-color);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.close-modal:hover {
+    background: var(--link-hover-color);
+    transform: translateY(-2px);
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 999;
+    backdrop-filter: blur(4px);
+}
+
+.no-results {
     text-align: center;
-    font-size: 1.2rem;
+    padding: 2rem;
+    color: var(--text-color);
+}
+
+.no-results i {
+    font-size: 2rem;
+    color: var(--link-color);
     margin-bottom: 1rem;
 }
 
-.button {
-    display: block;
-    margin: 0 auto;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    color: #0A192F;
-    background-color: #64ffda;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.no-results p {
+    font-size: 1.1rem;
 }
 
-.button:hover {
-    background-color: #45e6c0;
+
+/* Responsive Design */
+@media screen and (max-width: 1280px) {
+    .wiki-container {
+        max-width: 700px;
+        margin-left: -280px;
+    }
+    
+    .wiki-sidebar {
+        position: relative;
+        top: 0;
+        max-width: 650px;
+    }
+
+    .wiki-content {
+        min-width: 150%;
+        max-width: 150%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .wiki-container {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+        max-width: 550px;
+        margin-left: -230px;
+    }
+    
+    .wiki-sidebar {
+        position: relative;
+        top: 0;
+        max-width: 140%;
+        min-width: 140%;
+        margin: 0 auto;
+    }
+
+    .wiki-content {
+        min-width: 130%;
+        max-width: 130%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .wiki-container {
+        padding: 0.75rem;
+        margin-left: -10px;
+    }
+
+    .wiki-content {
+        min-width: 87%;
+        max-width: 87%;
+    }
+
+    .wiki-sidebar {
+        max-width: 93%;
+        min-width: 93%;
+    }
+
+    .wiki-content {
+        padding: 1rem;
+    }
+
+    .faq-question {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
+    .faq-content {
+        padding: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .wiki-container {
+        padding: 0.5rem;
+    }
+
+    .wiki-sidebar {
+        padding: 0.75rem;
+    }
+
+    .wiki-search input {
+        padding: 0.6rem;
+        height: 44px; 
+        font-size: 16px;
+    }
+
+    .faq-question {
+        padding: 0.75rem;
+        font-size: 0.95rem;
+    }
+
+    .faq-content {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+
+    .wiki-content h2 {
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .toggle-icon {
+        font-size: 1rem;
+    }
+    
+    .faq-metadata {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+    }
+    
+    .version-history-btn {
+        width: 100%;
+        justify-content: space-between;
+        padding: 0.75rem;
+    }
+    
+    .version-history-modal {
+        width: 95%;
+        padding: 1rem;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
 }

@@ -1,60 +1,75 @@
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; 
+.content {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .intro-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 1rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem;
 }
 
-.intro {
-    font-size: 1.3rem;
-    font-weight: 500;
-    margin-bottom: 0.01rem;
-    color: #64ffda;
+.intro-section {
+    text-align: left;
+    margin: 2rem 0;
 }
 
-.team-name {
-    font-size: 8rem;
-    font-weight: 800;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    background: linear-gradient(45deg, #64ffda, #00bcd4);
+.intro-greeting {
+    font-size: 2rem;
+    margin-bottom: -20px;
+    font-weight: 600;
+    background: linear-gradient(45deg, var(--logo-gradient-start), var(--logo-gradient-end));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 0;
-    line-height: 1;
 }
 
-p {
-    font-size: 1.4rem;
-    font-weight: 400;
-    margin-top: 1.5rem;
-    margin-bottom: 2rem;
-    line-height: 1.6;
+.intro-title {
+    font-size: 9rem;
+    font-weight: 800;
+    margin: 0 0 1rem 0;
+    background: linear-gradient(45deg, var(--logo-gradient-start), var(--logo-gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 4px;
+    text-transform: uppercase;
 }
 
-.cta-button {
-    display: inline-block;
-    background-color: #64ffda;
-    color: #0A192F;
-    padding: 0.7rem 1.2rem;  
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.5rem;  
-    border-radius: 4px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    white-space: nowrap;
-    margin-top: 0.1rem;  
+.intro-text {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    margin-bottom: 1.8rem;
+    color: var(--text-color);
+    max-width: 800px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
 }
 
-.cta-button:hover {
-    background-color: #45e6c0;
-    transform: translateY(-2px);
+@media screen and (max-width: 768px) {
+    .intro-container {
+        padding: 1rem;
+    }
+
+    .intro-title {
+        font-size: 6rem;
+    }
+    
+    .intro-greeting {
+        font-size: 2rem;
+    }
+    
+    .intro-text {
+        font-size: 1rem;
+        padding: 0 0.5rem;
+    }
 }
 
+@media screen and (max-width: 480px) {
+    .intro-title {
+        font-size: 4.5rem;
+    }
+    
+    .intro-greeting {
+        font-size: 1.5rem;
+    }
+}

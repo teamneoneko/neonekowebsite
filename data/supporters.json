@@ -1,0 +1,14 @@
+[
+    {
+        "name": "John Doe",
+        "amount": 50.00,
+        "message": "Keep up the great work!",
+        "date": "2024-01-15"
+    },
+    {
+        "name": "Jane Smith",
+        "amount": 25.00,
+        "message": "Love the tools!",
+        "date": "2024-01-14"
+    }
+]

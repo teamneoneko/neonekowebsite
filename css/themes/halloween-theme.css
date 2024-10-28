@@ -1,0 +1,85 @@
+:root {
+    --background-color: #15131a;
+    --text-color: #fbf1c7;
+    --header-background: #0a0910;
+    --menu-hover-background: rgba(255, 87, 12, 0.15);
+    --menu-active-color: #ff570c;
+    --logo-gradient-start: #ff570c;
+    --logo-gradient-end: #9200ff;
+    --button-background: #ff570c;
+    --button-color: #000000;
+    --button-hover-background: #ff8847;
+    --link-color: #ff570c;
+    --link-hover-color: #9200ff;
+    --border-color: #ff570c;
+    --footer-text-color: #b78cff;
+}
+
+.logo {
+    text-shadow: 0 0 15px #ff570c, 0 0 30px #ff570c;
+    animation: pulsate 2s infinite;
+}
+
+.menu a {
+    transition: all 0.3s ease;
+}
+
+.menu a:hover {
+    text-shadow: 0 0 12px #ff570c;
+    transform: scale(1.05);
+}
+
+.wiki-nav a:hover {
+    background: linear-gradient(90deg, var(--menu-hover-background), transparent);
+    border-left: 3px solid var(--link-color);
+}
+
+.faq-question:hover {
+    background: linear-gradient(45deg, #15131a, var(--menu-hover-background));
+}
+
+@keyframes pulsate {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; }
+    100% { opacity: 1; }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #15131a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ff570c;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ff8847;
+}
+
+.logo-link::after {
+    content: '';
+    background: url('../../images/pumpkin.png'); 
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin-left: 10px;
+    animation: floatPumpkin 3s ease-in-out infinite;
+}
+
+.random-pumpkin {
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 0 5px rgba(255, 87, 12, 0.5));
+}
+
+@keyframes floatPumpkin {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(5deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+}

@@ -1,0 +1,53 @@
+{
+    "faqs": [
+      {
+        "id": 3,
+        "category": "Projects",
+        "question": "What is Cats Blender Plugin?",
+        "answer": "# Cats Blender Plugin\n\n[info]Cats Blender Plugin is a comprehensive tool for VRChat model optimization.[/info]\n\n## Supported Model Formats:\n• MMD\n• XNALara\n• Mixamo\n• Source Engine\n• Unreal Engine\n• DAZ/Poser\n• Blender Rigify\n• Sims 2\n• Motion Builder\n• 3DS Max\n• And potentially more!\n\n[note]The plugin is designed to streamline the process of importing and optimizing models for VRChat use.[/note]",
+        "keywords": ["cats", "plugin", "blender", "vrchat", "models"],
+        "version": "1.0",
+        "lastUpdated": "2024-01-25T00:00:00Z",
+        "history": [
+          {
+            "version": "1.0",
+            "date": "2024-01-25T00:00:00Z",
+            "changes": "Initial version"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "category": "Projects",
+        "question": "What is Avatar Toolkit?",
+        "answer": "# Avatar Toolkit\n\n[info]Avatar Toolkit is the next generation of avatar optimization tools, planned for Blender 5.0+[/info]\n\n## Key Features:\n• Modern replacement for Cats Blender Plugin\n• Integrated functionality of multiple add-ons\n• Streamlined workflow for Unity and other engines\n\n[note]Avatar Toolkit aims to reduce dependency on third-party add-ons by incorporating features from:\n• Material Combiner\n• MMD Tools\n• And more![/note]",
+        "keywords": ["avatar toolkit", "new", "modern", "replacement", "unity"],
+        "version": "1.0",
+        "lastUpdated": "2024-01-25T00:00:00Z",
+        "history": [
+          {
+            "version": "1.0",
+            "date": "2024-01-25T00:00:00Z",
+            "changes": "Initial version"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "category": "Projects",
+        "question": "What are you working on in Avatar Toolkit?",
+        "answer": "# Avatar Toolkit Development\n\n[info]You can track our progress in real-time through multiple channels:[/info]\n\n## Development Tracking:\n• [link]https://github.com/orgs/teamneoneko/projects/|Project TODO Boards[/link]\n• Development forks\n• Pull Requests\n• Branch commits\n\n[note]Our development process is transparent and updates in real-time as changes occur.[/note]",
+        "keywords": ["development", "progress", "github", "updates"],
+        "version": "1.0",
+        "lastUpdated": "2024-01-25T00:00:00Z",
+        "history": [
+          {
+            "version": "1.0",
+            "date": "2024-01-25T00:00:00Z",
+            "changes": "Initial version"
+          }
+        ]
+      }
+    ]
+  }
+  
