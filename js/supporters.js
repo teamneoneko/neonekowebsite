@@ -29,8 +29,8 @@ class SupportersManager {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             
-            const data = await response.json();
-            this.supporters = data.supporters;
+            // Direct assignment since JSON is already an array
+            this.supporters = await response.json();
             this.renderSupporters(this.supporters);
             this.showLoading(false);
             
@@ -79,7 +79,11 @@ class SupportersManager {
         const card = document.createElement('div');
         card.className = 'supporter-card';
         
-        const date = new Date(supporter.date).toLocaleDateString('en-US', {
+        // Split the date string and rearrange it to MM/DD/YYYY format
+        const [day, month, year] = supporter.date.split('/');
+        const formattedDate = new Date(`${month}/${day}/${year}`);
+        
+        const date = formattedDate.toLocaleDateString('en-US', {
             year: 'numeric',
             month: 'long',
             day: 'numeric'
@@ -93,7 +97,7 @@ class SupportersManager {
         `;
         
         return card;
-    }    
+    }     
 
     showError() {
         this.showLoading(false);
