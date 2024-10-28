@@ -3,7 +3,7 @@ class SupportersManager {
         this.supportersContainer = document.getElementById('supporters-grid');
         this.loadingElement = document.getElementById('loading');
         this.searchInput = document.getElementById('supporter-search');
-        this.supportersUrl = './data/supporters.json';
+        this.supportersUrl = 'https://raw.githubusercontent.com/teamneoneko/neonekowebsite/main/data/supporters.json';
         this.retryDelay = 3000;
         this.maxRetries = 3;
         this.supporters = [];
@@ -29,7 +29,8 @@ class SupportersManager {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             
-            this.supporters = await response.json();
+            const data = await response.json();
+            this.supporters = data.supporters;
             this.renderSupporters(this.supporters);
             this.showLoading(false);
             
@@ -86,7 +87,7 @@ class SupportersManager {
         
         card.innerHTML = `
             <div class="supporter-name">${this.escapeHtml(supporter.name)}</div>
-            <div class="supporter-amount">$${supporter.amount.toFixed(2)}</div>
+            <div class="supporter-amount">${supporter.amount.toFixed(2)}</div>
             ${supporter.message ? `<div class="supporter-message">"${this.escapeHtml(supporter.message)}"</div>` : ''}
             <div class="supporter-date">Donated on ${date}</div>
         `;

@@ -10,10 +10,15 @@ document.addEventListener('DOMContentLoaded', () => {
     let faqData = [];
     let categoriesData = [];
 
-    // Fetch FAQ and categories data
+    // GitHub URLs
+    const baseUrl = 'https://raw.githubusercontent.com/teamneoneko/neonekowebsite/main/data';
+    const categoriesUrl = `${baseUrl}/categories.json`;
+    const faqBaseUrl = `${baseUrl}/faq`;
+
+    // Fetch FAQ data and categories from GitHub
     async function fetchFAQData() {
         try {
-            const categoriesResponse = await fetch('./data/categories.json');
+            const categoriesResponse = await fetch(categoriesUrl);
             if (!categoriesResponse.ok) {
                 throw new Error('Failed to fetch categories');
             }
@@ -24,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Fetch all category FAQ files in parallel
             const faqPromises = categories.map(category => {
                 const fileName = category.toLowerCase().replace(/\s+/g, '-');
-                return fetch(`./data/faq/${fileName}.json`)
+                return fetch(`${faqBaseUrl}/${fileName}.json`)
                     .then(response => response.json())
                     .catch(error => {
                         console.warn(`Failed to load ${fileName}.json:`, error);
@@ -165,40 +170,29 @@ document.addEventListener('DOMContentLoaded', () => {
     
         // Main formatting
         return processedContent
-            // Images with lazy loading and size parameters
             .replace(/\[image:(\d+):(\d+)\](.*?)\[\/image\]/g, '<img loading="lazy" src="$3" width="$1" height="$2" alt="FAQ Image">')
             .replace(/\[image\](.*?)\[\/image\]/g, '<img loading="lazy" src="$1" alt="FAQ Image">')
-            // Custom links
             .replace(/\[link\](.*?)\|(.*?)\[\/link\]/g, '<a href="$1">$2</a>')
-            // Markdown links
             .replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2">$1</a>')
-            // Text styling
             .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
             .replace(/\*(.*?)\*/g, '<em>$1</em>')
             .replace(/~~(.*?)~~/g, '<del>$1</del>')
-            // Code formatting
             .replace(/```([\s\S]*?)```/g, '<pre><code>$1</code></pre>')
             .replace(/`([^`]+)`/g, '<code>$1</code>')
-            // Headers
             .replace(/^### (.*?)$/gm, '<h3>$1</h3>')
             .replace(/^## (.*?)$/gm, '<h2>$1</h2>')
             .replace(/^# (.*?)$/gm, '<h1>$1</h1>')
-            // Bullet lists
             .replace(/^\- (.*?)$/gm, '• $1')
-            // Color highlighting
             .replace(/\[color:(.*?)\](.*?)\[\/color\]/g, '<span style="color: $1">$2</span>')
-            // Collapsible sections with improved multiline support
             .replace(/\[details\]([^|]*?)\|([\s\S]*?)\[\/details\]/gs, '<details class="faq-details"><summary class="faq-summary">$1</summary><div class="faq-details-content">$2</div></details>')
-            // Callouts with improved multiline support
             .replace(/\[info\]([\s\S]*?)\[\/info\]/gs, '<div class="info-callout">$1</div>')
             .replace(/\[warning\]([\s\S]*?)\[\/warning\]/gs, '<div class="warning-callout">$1</div>')
             .replace(/\[note\]([\s\S]*?)\[\/note\]/gs, '<div class="note-callout">$1</div>')
-            // Paragraphs
             .replace(/\n\n/g, '</p><p>')
             .replace(/\n/g, '<br>');
     }   
 
-    // Initialize
+    // Initialize with GitHub data
     fetchFAQData()
         .then(({ faqData: data, categoriesData: categories }) => {
             faqData = data;
