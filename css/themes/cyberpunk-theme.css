@@ -1,0 +1,14 @@
+:root {
+    --background-color: #0d0221;
+    --text-color: #ff2a6d;
+    --header-background: #1b1b3a;
+    --menu-hover-background: rgba(255, 42, 109, 0.1);
+    --menu-active-color: #05ffa1;
+    --logo-gradient-start: #ff2a6d;
+    --logo-gradient-end: #05ffa1;
+    --button-background: #ff2a6d;
+    --button-color: #0d0221;
+    --link-color: #05ffa1;
+    --border-color: #ff2a6d;
+    --footer-text-color: #ff2a6d;
+}

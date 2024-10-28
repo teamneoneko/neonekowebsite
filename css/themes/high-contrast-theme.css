@@ -1,0 +1,38 @@
+:root {
+    --background-color: #000000;
+    --text-color: #ffffff;
+    --header-background: #000000;
+    --menu-hover-background: #ffffff;
+    --menu-active-color: #ffff00;
+    --logo-gradient-start: #ffff00;
+    --logo-gradient-end: #ffffff;
+    --button-background: #ffff00;
+    --button-color: #000000;
+    --button-hover-background: #ffffff;
+    --link-color: #ffff00;
+    --link-hover-color: #ffffff;
+    --border-color: #ffffff;
+    --footer-text-color: #ffffff;
+}
+
+* {
+    text-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.menu a, .button, .link {
+    outline: 2px solid transparent;
+    transition: outline 0.2s ease;
+}
+
+.menu a:focus, .button:focus, .link:focus {
+    outline: 2px solid #ffff00;
+}
+
+.wiki-nav a {
+    border-left: 4px solid transparent;
+}
+
+.wiki-nav a:hover {
+    border-left: 4px solid #ffff00;
+}
