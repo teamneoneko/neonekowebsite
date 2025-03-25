@@ -555,4 +555,60 @@
         max-height: 80vh;
         overflow-y: auto;
     }
+
+    .question-controls {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .question-text {
+        flex: 1;
+    }
+    
+    .faq-question {
+        cursor: pointer;
+        padding: 1.0rem;
+        margin: 0;
+        background: var(--background-color);
+        border-radius: 4px 4px 0 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.3s ease;
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+    
+    .copy-link-btn {
+        background: transparent;
+        border: none;
+        color: var(--footer-text-color);
+        cursor: pointer;
+        padding: 0.3rem;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease;
+        opacity: 0.6;
+    }
+    
+    .copy-link-btn:hover {
+        color: var(--link-color);
+        background: var(--menu-hover-background);
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    
+    .copy-link-btn.copied {
+        color: #4CAF50;
+        opacity: 1;
+    }
+    
+    /* Make sure the copy button doesn't affect the toggle behavior */
+    .faq-question .copy-link-btn {
+        z-index: 2;
+    }
+    
 }

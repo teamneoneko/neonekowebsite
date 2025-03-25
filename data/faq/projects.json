@@ -57,6 +57,22 @@
           "changes": "Initial version"
         }
       ]
+    },
+    {
+      "id": 6,
+      "category": "Projects",
+      "question": "What is Cats Blender Plugin End of Life?",
+      "answer": "# Cats Blender Plugin End of Life\n\n[info]Team Neoneko has designated Cats Blender Plugin as end-of-life since September 2024.[/info]\n\n## Reasons for End-of-Life Status:\n• Dependency on third-party plugins that receive minimal or no updates\n• Legacy codebase predating Blender 2.8\n• User misconceptions about functionality (e.g., the \"Fix MMD Model\" button)\n\nIt's time to retire Cats Blender Plugin and transition to a more modern solution. This is why we're developing Avatar Toolkit—a new, modern Blender toolkit with in-house MMD tools to help optimize your models.\n\nMoving forward, no new features will be added to Cats Blender Plugin. We will only maintain Cats until Avatar Toolkit reaches a more stable state and achieves feature parity.\n\n[link]https://github.com/teamneoneko/Avatar-Toolkit/issues/65|Suggest new features for Avatar Toolkit[/link]\n\n[note]Please direct all feature requests to Avatar Toolkit rather than Cats Blender Plugin.[/note]",
+      "keywords": ["cats", "end of life", "eol", "legacy", "avatar toolkit", "transition", "future"],
+      "version": "1.0",
+      "lastUpdated": "2025-03-25T00:00:00Z",
+      "history": [
+        {
+          "version": "1.0",
+          "date": "2025-03-25T00:00:00Z",
+          "changes": "Initial version"
+        }
+      ]
     }
   ]
 }

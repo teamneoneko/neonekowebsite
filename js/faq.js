@@ -84,10 +84,21 @@ document.addEventListener('DOMContentLoaded', () => {
                     const faqItem = document.createElement('div');
                     faqItem.className = 'faq-item';
                     faqItem.dataset.keywords = faq.keywords.join(',');
+                    faqItem.id = `faq-${faq.id}`; // Add ID for direct linking
                     
                     const question = document.createElement('h3');
                     question.className = 'faq-question';
-                    question.innerHTML = `${faq.question} <span class="toggle-icon">+</span>`;
+                    
+                    // Create question content with toggle icon and copy link button
+                    question.innerHTML = `
+                        <span class="question-text">${faq.question}</span>
+                        <div class="question-controls">
+                            <button class="copy-link-btn" data-faq-id="${faq.id}" title="Copy link to this FAQ">
+                                <i class="fas fa-link"></i>
+                            </button>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                    `;
                     
                     const answer = document.createElement('div');
                     answer.className = 'faq-content hidden markdown-content';
@@ -105,7 +116,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     
                     answer.innerHTML = formattedContent + metadata;
                     
-                    question.addEventListener('click', () => {
+                    question.addEventListener('click', (e) => {
+                        // Don't toggle if clicking the copy link button
+                        if (e.target.closest('.copy-link-btn')) {
+                            return;
+                        }
+                        
                         const wasHidden = answer.classList.contains('hidden');
                         
                         document.querySelectorAll('.faq-content').forEach(content => {
@@ -252,10 +268,21 @@ document.addEventListener('DOMContentLoaded', () => {
                     const faqItem = document.createElement('div');
                     faqItem.className = 'faq-item';
                     faqItem.dataset.keywords = faq.keywords.join(',');
+                    faqItem.id = `faq-${faq.id}`; // Add ID for direct linking
                     
                     const question = document.createElement('h3');
                     question.className = 'faq-question';
-                    question.innerHTML = `${faq.question} <span class="toggle-icon">+</span>`;
+                    
+                    // Create question content with toggle icon and copy link button
+                    question.innerHTML = `
+                        <span class="question-text">${faq.question}</span>
+                        <div class="question-controls">
+                            <button class="copy-link-btn" data-faq-id="${faq.id}" title="Copy link to this FAQ">
+                                <i class="fas fa-link"></i>
+                            </button>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                    `;
                     
                     const answer = document.createElement('div');
                     answer.className = 'faq-content hidden markdown-content';
@@ -273,7 +300,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     
                     answer.innerHTML = formattedContent + metadata;
                     
-                    question.addEventListener('click', () => {
+                    question.addEventListener('click', (e) => {
+                        // Don't toggle if clicking the copy link button
+                        if (e.target.closest('.copy-link-btn')) {
+                            return;
+                        }
+                        
                         const wasHidden = answer.classList.contains('hidden');
                         
                         document.querySelectorAll('.faq-content').forEach(content => {
@@ -349,4 +381,64 @@ document.addEventListener('DOMContentLoaded', () => {
             modal.querySelector('.close-modal').addEventListener('click', closeModal);
         }
     });
+    
+    // Copy link functionality
+    document.addEventListener('click', (e) => {
+        if (e.target.closest('.copy-link-btn')) {
+            const faqId = e.target.closest('.copy-link-btn').dataset.faqId;
+            const url = `${window.location.origin}${window.location.pathname}#faq-${faqId}`;
+            
+            // Copy to clipboard
+            navigator.clipboard.writeText(url).then(() => {
+                // Show a temporary success message
+                const button = e.target.closest('.copy-link-btn');
+                const originalHTML = button.innerHTML;
+                button.innerHTML = '<i class="fas fa-check"></i>';
+                button.classList.add('copied');
+                
+                setTimeout(() => {
+                    button.innerHTML = originalHTML;
+                    button.classList.remove('copied');
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+            
+            // Prevent event bubbling to avoid toggling the FAQ
+            e.stopPropagation();
+        }
+    });
+    
+    // Check for hash in URL and open corresponding FAQ
+    function checkUrlHash() {
+        const hash = window.location.hash;
+        if (hash && hash.startsWith('#faq-')) {
+            const faqId = hash.replace('#faq-', '');
+            setTimeout(() => {
+                const faqElement = document.getElementById(`faq-${faqId}`);
+                if (faqElement) {
+                    // Scroll to the element
+                    faqElement.scrollIntoView({ behavior: 'smooth' });
+                    
+                    // Open the FAQ
+                    const question = faqElement.querySelector('.faq-question');
+                    const answer = faqElement.querySelector('.faq-content');
+                    
+                    document.querySelectorAll('.faq-content').forEach(content => {
+                        content.classList.add('hidden');
+                        content.previousElementSibling.querySelector('.toggle-icon').textContent = '+';
+                    });
+                    
+                    answer.classList.remove('hidden');
+                    question.querySelector('.toggle-icon').textContent = '-';
+                }
+            }, 500); // Small delay to ensure content is loaded
+        }
+    }
+
+    // Check hash when page loads
+    checkUrlHash();
+
+    // Listen for hash changes
+    window.addEventListener('hashchange', checkUrlHash);
 });
