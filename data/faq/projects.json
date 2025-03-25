@@ -1,53 +1,62 @@
 {
-    "faqs": [
-      {
-        "id": 3,
-        "category": "Projects",
-        "question": "What is Cats Blender Plugin?",
-        "answer": "# Cats Blender Plugin\n\n[info]Cats Blender Plugin is a comprehensive tool for VRChat model optimization.[/info]\n\n## Supported Model Formats:\n• MMD\n• XNALara\n• Mixamo\n• Source Engine\n• Unreal Engine\n• DAZ/Poser\n• Blender Rigify\n• Sims 2\n• Motion Builder\n• 3DS Max\n• And potentially more!\n\n[note]The plugin is designed to streamline the process of importing and optimizing models for VRChat use.[/note]",
-        "keywords": ["cats", "plugin", "blender", "vrchat", "models"],
-        "version": "1.0",
-        "lastUpdated": "2024-01-25T00:00:00Z",
-        "history": [
-          {
-            "version": "1.0",
-            "date": "2024-01-25T00:00:00Z",
-            "changes": "Initial version"
-          }
-        ]
-      },
-      {
-        "id": 4,
-        "category": "Projects",
-        "question": "What is Avatar Toolkit?",
-        "answer": "# Avatar Toolkit\n\n[info]Avatar Toolkit is the next generation of avatar optimization tools, planned for Blender 5.0+[/info]\n\n## Key Features:\n• Modern replacement for Cats Blender Plugin\n• Integrated functionality of multiple add-ons\n• Streamlined workflow for Unity and other engines\n\n[note]Avatar Toolkit aims to reduce dependency on third-party add-ons by incorporating features from:\n• Material Combiner\n• MMD Tools\n• And more![/note]",
-        "keywords": ["avatar toolkit", "new", "modern", "replacement", "unity"],
-        "version": "1.0",
-        "lastUpdated": "2024-01-25T00:00:00Z",
-        "history": [
-          {
-            "version": "1.0",
-            "date": "2024-01-25T00:00:00Z",
-            "changes": "Initial version"
-          }
-        ]
-      },
-      {
-        "id": 5,
-        "category": "Projects",
-        "question": "What are you working on in Avatar Toolkit?",
-        "answer": "# Avatar Toolkit Development\n\n[info]You can track our progress in real-time through multiple channels:[/info]\n\n## Development Tracking:\n• [link]https://github.com/orgs/teamneoneko/projects/|Project TODO Boards[/link]\n• Development forks\n• Pull Requests\n• Branch commits\n\n[note]Our development process is transparent and updates in real-time as changes occur.[/note]",
-        "keywords": ["development", "progress", "github", "updates"],
-        "version": "1.0",
-        "lastUpdated": "2024-01-25T00:00:00Z",
-        "history": [
-          {
-            "version": "1.0",
-            "date": "2024-01-25T00:00:00Z",
-            "changes": "Initial version"
-          }
-        ]
-      }
-    ]
-  }
-  
+  "faqs": [
+    {
+      "id": 3,
+      "category": "Projects",
+      "question": "What is Cats Blender Plugin?",
+      "answer": "# Cats Blender Plugin\n\n[info]Cats Blender Plugin is the unofficial version maintained by Team Neoneko. It's a tool designed to shorten steps needed to import and optimize models into VRChat.[/info]\n\n## Supported Model Formats:\n• MMD\n• XNALara\n• Mixamo\n• Source Engine\n• Unreal Engine\n• DAZ/Poser\n• Blender Rigify\n• Sims 2\n• Motion Builder\n• 3DS Max\n• And potentially more!\n\nWith Cats it takes only a few minutes to upload your model into VRChat. All the hours long processes of fixing your models are compressed into a few functions!\n\n[link]https://catsblenderplugin.xyz|Visit the Cats Blender Plugin Website[/link]\n\n[note]This version is the unofficial version. To find out what is happening to the official version go here: https://catsblenderplugin.xyz/wiki.html?version=current#what-is-the-current-status-of-the-official-cats-blender-plugin[/note]",
+      "keywords": ["cats", "plugin", "blender", "vrchat", "models", "unofficial", "team neoneko"],
+      "version": "1.1",
+      "lastUpdated": "2024-05-01T00:00:00Z",
+      "history": [
+        {
+          "version": "1.0",
+          "date": "2024-01-25T00:00:00Z",
+          "changes": "Initial version"
+        },
+        {
+          "version": "1.1",
+          "date": "2025-03-25T00:00:00Z",
+          "changes": "Updated with unofficial status information and added link to website"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "category": "Projects",
+      "question": "What is Avatar Toolkit?",
+      "answer": "# Avatar Toolkit\n\n[info]Avatar Toolkit is the next generation of avatar optimization tools, planned for Blender 5.0+[/info]\n\n## Key Features:\n• More Advanced Armature Validation System\n• Comprehensive Import Support\n• Standardize bones system\n• Rigify to Unity system\n• Full Pose Mode Features\n• FBX and Resonite Export Options\n• Optimization Tools Suite\n• Custom Avatar Tools\n• Viseme Creation\n• Atlas Texturing system\n• Eye Tracking Support (Legacy and VRChat SDK3)\n• Built-in Updater\n• Debug Options\n\n[link]https://avatartoolkit.xyz|Visit the Avatar Toolkit Website[/link]\n\n[note]Avatar Toolkit is currently in Alpha. There will be issues and bugs as development continues.[/note]",
+      "keywords": ["avatar toolkit", "new", "modern", "replacement", "unity", "alpha", "blender 5"],
+      "version": "1.1",
+      "lastUpdated": "2025-03-25T00:00:00Z",
+      "history": [
+        {
+          "version": "1.0",
+          "date": "2024-01-25T00:00:00Z",
+          "changes": "Initial version"
+        },
+        {
+          "version": "1.1",
+          "date": "2025-03-25T00:00:00Z",
+          "changes": "Updated feature list, added Alpha status note and website link"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "category": "Projects",
+      "question": "What are you working on in Avatar Toolkit?",
+      "answer": "# Avatar Toolkit Development\n\n[info]You can track our progress in real-time through multiple channels:[/info]\n\n## Development Tracking:\n• [link]https://github.com/orgs/teamneoneko/projects/|Project TODO Boards[/link]\n• Development forks\n• Pull Requests\n• Branch commits\n\n[note]Our development process is transparent and updates in real-time as changes occur.[/note]",
+      "keywords": ["development", "progress", "github", "updates"],
+      "version": "1.0",
+      "lastUpdated": "2024-01-25T00:00:00Z",
+      "history": [
+        {
+          "version": "1.0",
+          "date": "2024-01-25T00:00:00Z",
+          "changes": "Initial version"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+:root {
+    --background-color: #0a0a1f;
+    --text-color: #ffffff;
+    --header-background: #050510;
+    --menu-hover-background: rgba(255, 223, 0, 0.15);
+    --menu-active-color: #ffd700;
+    --logo-gradient-start: #ffd700;
+    --logo-gradient-end: #00ffff;
+    --button-background: linear-gradient(45deg, #ffd700, #00ffff);
+    --button-color: #000000;
+    --button-hover-background: linear-gradient(45deg, #ffe44d, #66ffff);
+    --link-color: #ffd700;
+    --link-hover-color: #00ffff;
+    --border-color: #ffd700;
+    --footer-text-color: #87CEEB;
+}
+
+/* Enhanced logo animation */
+.logo {
+    text-shadow: 0 0 15px var(--logo-gradient-start), 0 0 30px var(--logo-gradient-end);
+    animation: logoGlow 4s infinite;
+}
+
+@keyframes logoGlow {
+    0%, 100% { text-shadow: 0 0 15px var(--logo-gradient-start), 0 0 30px var(--logo-gradient-start); }
+    50% { text-shadow: 0 0 15px var(--logo-gradient-end), 0 0 30px var(--logo-gradient-end); }
+}
+
+/* Improved firework effects */
+.firework {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    transform-origin: center;
+    box-shadow: 0 0 10px currentColor;
+}
+
+.firework-particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    animation: particle 1.5s ease-out forwards;
+    box-shadow: 0 0 6px currentColor;
+}
+
+@keyframes particle {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+        filter: brightness(1.5);
+    }
+    50% {
+        opacity: 0.8;
+        filter: brightness(1.2);
+    }
+    100% {
+        transform: translate(var(--tx), var(--ty)) scale(0.1);
+        opacity: 0;
+        filter: brightness(1);
+    }
+}
+
+/* Enhanced sparkle effect */
+.sparkle {
+    position: fixed;
+    width: 3px;
+    height: 3px;
+    background: linear-gradient(45deg, #ffffff, #ffd700);
+    border-radius: 50%;
+    animation: sparkle 4s linear infinite;
+    opacity: 0;
+    box-shadow: 0 0 8px #ffd700;
+}
+
+@keyframes sparkle {
+    0% { transform: translateY(100vh) scale(0) rotate(0deg); opacity: 0; }
+    50% { opacity: 1; transform: translateY(50vh) scale(1) rotate(180deg); }
+    100% { transform: translateY(-20vh) scale(0) rotate(360deg); opacity: 0; }
+}
+
+/* Float animation for year text */
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(-2deg); }
+    50% { transform: translateY(-15px) rotate(2deg); }
+}
+
+/* Button hover enhancement */
+.button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+/* Menu hover effects */
+.menu a:hover {
+    text-shadow: 0 0 10px var(--logo-gradient-start);
+    background: linear-gradient(90deg, var(--menu-hover-background), transparent);
+    transform: translateX(5px);
+    transition: all 0.3s ease;
+}
+
+/* Fade in animation for new year message */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
